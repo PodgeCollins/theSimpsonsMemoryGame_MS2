@@ -37,6 +37,11 @@ img{
     transition: transform .2s;
 }
 
+.memory-card.flip{
+    transform: rotateY(180deg);
+
+}
+
 
 .front,
 .back {
