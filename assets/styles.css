@@ -17,22 +17,23 @@ img{
 .memory-game{
     width: 640px;
     height: 640px;
-    display: flex;
     margin: auto;
+    display: flex;
     flex-wrap: wrap;
-    border: 2px solid lime;
     perspective: 1000px;
+    border: 2px solid lime;
 }
 
 .memory-card{
     
     width: calc(25% - 10px);
     height: calc(33.333% - 10px);
-    position: relative;
     margin: 5px;
+    position: relative;
     transform: scale 1;
     transform-style: preserve-3d;
     transition: transform .5s;
+    
 }
 
 .memory-card:active{
@@ -54,5 +55,10 @@ img{
     position: absolute;
     border-radius: 5px;
     background: green;
+    backface-visibility: hidden;
     border: 2px solid black;
+}
+
+.front {
+  transform: rotateY(180deg);
 }
