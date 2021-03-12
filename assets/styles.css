@@ -21,6 +21,7 @@ img{
     margin: auto;
     flex-wrap: wrap;
     border: 2px solid lime;
+    perspective: 1000px;
 }
 
 .memory-card{
@@ -30,6 +31,8 @@ img{
     position: relative;
     margin: 5px;
     transform: scale 1;
+    transform-style: preserve-3d;
+    transition: transform .5s;
 }
 
 .memory-card:active{
