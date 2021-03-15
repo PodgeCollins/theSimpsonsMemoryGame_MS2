@@ -5,65 +5,87 @@
     <meta charset="UTF-8">
 
     <title>Memory Game</title>
-
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 
 <body>
-    <section class="memory-game">
-         <div class="memory-card" data-framework="Hearts">
-            <img class="front" src="img/ace_hearts.jpg" alt="Hearts" />
-            <img class="back" src="img/red.jpg" alt="Red" />
-        </div>
-        <div class="memory-card" data-framework="Hearts">
-            <img class="front" src="img/ace_hearts.jpg" alt="Hearts" />
-            <img class="back" src="img/red.jpg" alt="Red" />
-        </div>
-        <div class="memory-card" data-framework="Diamonds">
-            <img class="front" src="img/ace_diamonds.jpg" alt="Diamonds" />
-            <img class="back" src="img/red.jpg" alt="Red" />
-        </div>
-        <div class="memory-card" data-framework="Diamonds">
-            <img class="front" src="img/ace_diamonds.jpg" alt="Diamonds" />
-            <img class="back" src="img/red.jpg" alt="Red" />
-        </div>
+    <div class="container">
+        <header>
+            <h1>Memory Game</h1>
+        </header>
+        <section class="score-panel">
+            <ul class="stars">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <span class="moves">0</span> Move(s)
 
-        <div class="memory-card" data-framework="Clubs">
-            <img class="front" src="img/ace_clubs.jpg" alt="Clubs" />
-            <img class="back" src="img/red.jpg" alt="Red" />
-        </div>
-        <div class="memory-card" data-framework="Clubs">
-            <img class="front" src="img/ace_clubs.jpg" alt="Clubs" />
-            <img class="back" src="img/red.jpg" alt="Red" />
-        </div>
+            <div class="timer">
+            </div>
 
-        <div class="memory-card" data-framework="Spades">
-            <img class="front" src="img/ace_spades.jpg" alt="Spades" />
-            <img class="back" src="img/red.jpg" alt="Red" />
-        </div>
-        <div class="memory-card" data-framework="Spades">
-            <img class="front" src="img/ace_spades.jpg" alt="Spades" />
-            <img class="back" src="img/red.jpg" alt="Red" />
-        </div>
+            <div class="restart">
+                <i class="fa fa-repeat"></i>
+            </div>
 
-        <div class="memory-card" data-framework="King">
-            <img class="front" src="img/king.jpg" alt="King" />
-            <img class="back" src="img/red.jpg" alt="Red" />
-        </div>
-        <div class="memory-card" data-framework="King">
-            <img class="front" src="img/king.jpg" alt="King" />
-            <img class="back" src="img/red.jpg" alt="Red" />
-        </div>
+        </section>
+        <section class="memory-game">
+            <div class="memory-card" data-framework="Hearts">
+                <img class="front" src="img/ace_hearts.jpg" alt="Hearts" />
+                <img class="back" src="img/red.jpg" alt="Red" />
+            </div>
+            <div class="memory-card" data-framework="Hearts">
+                <img class="front" src="img/ace_hearts.jpg" alt="Hearts" />
+                <img class="back" src="img/red.jpg" alt="Red" />
+            </div>
+            <div class="memory-card" data-framework="Diamonds">
+                <img class="front" src="img/ace_diamonds.jpg" alt="Diamonds" />
+                <img class="back" src="img/red.jpg" alt="Red" />
+            </div>
+            <div class="memory-card" data-framework="Diamonds">
+                <img class="front" src="img/ace_diamonds.jpg" alt="Diamonds" />
+                <img class="back" src="img/red.jpg" alt="Red" />
+            </div>
 
-        <div class="memory-card" data-framework="Queen">
-            <img class="front" src="img/queen.jpg" alt="Queen" />
-            <img class="back" src="img/red.jpg" alt="Red" />
-        </div>
-        <div class="memory-card" data-framework="Queen">
-            <img class="front" src="img/queen.jpg" alt="Queen" />
-            <img class="back" src="img/red.jpg" alt="Red" />
-        </div>
-    </section>
+            <div class="memory-card" data-framework="Clubs">
+                <img class="front" src="img/ace_clubs.jpg" alt="Clubs" />
+                <img class="back" src="img/red.jpg" alt="Red" />
+            </div>
+            <div class="memory-card" data-framework="Clubs">
+                <img class="front" src="img/ace_clubs.jpg" alt="Clubs" />
+                <img class="back" src="img/red.jpg" alt="Red" />
+            </div>
+
+            <div class="memory-card" data-framework="Spades">
+                <img class="front" src="img/ace_spades.jpg" alt="Spades" />
+                <img class="back" src="img/red.jpg" alt="Red" />
+            </div>
+            <div class="memory-card" data-framework="Spades">
+                <img class="front" src="img/ace_spades.jpg" alt="Spades" />
+                <img class="back" src="img/red.jpg" alt="Red" />
+            </div>
+
+            <div class="memory-card" data-framework="King">
+                <img class="front" src="img/king.jpg" alt="King" />
+                <img class="back" src="img/red.jpg" alt="Red" />
+            </div>
+            <div class="memory-card" data-framework="King">
+                <img class="front" src="img/king.jpg" alt="King" />
+                <img class="back" src="img/red.jpg" alt="Red" />
+            </div>
+
+            <div class="memory-card" data-framework="Queen">
+                <img class="front" src="img/queen.jpg" alt="Queen" />
+                <img class="back" src="img/red.jpg" alt="Red" />
+            </div>
+            <div class="memory-card" data-framework="Queen">
+                <img class="front" src="img/queen.jpg" alt="Queen" />
+                <img class="back" src="img/red.jpg" alt="Red" />
+            </div>
+        </section>
+    </div>
 
     <script src="assets/scripts.js"></script>
 </body>

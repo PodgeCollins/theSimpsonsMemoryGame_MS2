@@ -5,7 +5,7 @@
 }
 
 body {
-  height: 100vh;
+    height: 100vh;
   display: flex;
   background: #060AB2;
 }
@@ -14,6 +14,46 @@ img{
     width: 100px;
 }
 
+.container {
+    margin-left: 25%;
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+/*--------------------------------Score Panel-------------------------------*/
+.score-panel {
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.score-panel .stars {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+	list-style: none;
+	display: inline-block;
+}
+
+.score-panel .restart {
+	float: right;
+	cursor: pointer;
+}
+
+.fa-star {
+	color: #FFD700;
+}
+
+.timer {
+	display: inline-block;
+	margin: 0 1rem;
+}
+/*--------------------------------Memory Game-------------------------------*/
 .memory-game{
     width: 640px;
     height: 640px;
@@ -23,7 +63,7 @@ img{
     perspective: 1000px;
     border: 2px solid lime;
 }
-
+/*-----------------------------------Cards-------------------------------*/
 .memory-card{
     
     width: calc(25% - 10px);
