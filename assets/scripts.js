@@ -1,30 +1,18 @@
 const cards = document.querySelectorAll('.memory-card');
 
+
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
-// declaring move variable
 let moves = 0;
 let counter = document.querySelector(".moves");
 
-// declare variables for star icons
 const stars = document.querySelectorAll(".fa-star");
 
-// declaring variable of matchedCards
-let matchedCard = document.getElementsByClassName("match");
+let starsList = document.querySelectorAll(".stars li");
 
- // stars list
- let starsList = document.querySelectorAll(".stars li");
 
- // close icon in modal
- let closeicon = document.querySelector(".close");
-
- // declare modal
- let modal = document.getElementById("popup1")
-
- // shuffles cards when page is refreshed / loads
- document.body.onload = startGame();
-
+document.body.onload = startGame();
 
 function startGame(){
  
@@ -45,6 +33,7 @@ function startGame(){
     clearInterval(interval);
 }
 
+
 function flipCard(){
 
     if (lockBoard) return;
@@ -62,57 +51,10 @@ function flipCard(){
         // second click
         
         checkForMatch();
+        moveCounter();
     }
 }
 
-function checkForMatch(){
-        // do cards march?
-        if (firstCard.dataset.framework === secondCard.dataset.framework) {
-            // its a match
-            firstCard.removeEventListener('click', flipCard);
-            secondCard.removeEventListener('click', flipCard);
-            disableCards();
-            
-        } else {
-            unFlipCards();
-        }
-}
-
-function disableCards(){
-            // its a match
-            firstCard.removeEventListener('click', flipCard);
-            secondCard.removeEventListener('click', flipCard);
-            // cards cant be flipped back upon clicking
-            resetBoard();
-}
-
-function unFlipCards(){
-
-            lockBoard = true;
-
-            // not a match
-            setTimeout(() => {
-            firstCard.classList.remove('flip');
-            secondCard.classList.remove('flip');
-
-            resetBoard();
-            }, 1500);
-}
-
-function resetBoard() {
-            [hasFlippedCard, lockBoard] = [false, false];
-            [firstCard, secondCard] = [null, null];
-}
-
-(function shuffle() {
-            cards.forEach(card => {
-            let randomPos = Math.floor(Math.random() * 12);
-            card.style.order = randomPos;
-            });
-})();
-
-
-// @description count player's moves
 function moveCounter(){
     moves++;
     counter.innerHTML = moves;
@@ -140,8 +82,6 @@ function moveCounter(){
     }
 }
 
-
-// @description game timer
 var second = 0, minute = 0; hour = 0;
 var timer = document.querySelector(".timer");
 var interval;
@@ -161,43 +101,62 @@ function startTimer(){
 }
 
 
-// @description congratulations when all cards match, show modal and moves, time and rating
-function congratulations(){
-    if (matchedCard.length == 12){
-        clearInterval(interval);
-        finalTime = timer.innerHTML;
+function checkForMatch(){
+        // do cards march?
+        if (firstCard.dataset.framework === secondCard.dataset.framework) {
+            // its a match
+            firstCard.removeEventListener('click', flipCard);
+            secondCard.removeEventListener('click', flipCard);
+            disableCards();
 
-        // show congratulations modal
-        modal.classList.add("show");
 
-        // declare star rating variable
-        var starRating = document.querySelector(".stars").innerHTML;
 
-        //showing move, rating, time on modal
-        document.getElementById("finalMove").innerHTML = moves;
-        document.getElementById("starRating").innerHTML = starRating;
-        document.getElementById("totalTime").innerHTML = finalTime;
-
-        //closeicon on modal
-        closeModal();
-    };
+        } else {
+            unFlipCards();
+        }
 }
 
 
-// @description close icon on modal
-function closeModal(){
-    closeicon.addEventListener("click", function(){
-        modal.classList.remove("flip");
-        startGame();
-    });
+function disableCards(){
+            // its a match
+            firstCard.removeEventListener('click', flipCard);
+            secondCard.removeEventListener('click', flipCard);
+            // cards cant be flipped back upon clicking
+            resetBoard();
 }
 
+function unFlipCards(){
 
-// @desciption for user to play Again 
-function playAgain(){
-    modal.classList.remove("flip");
-    startGame();
+            lockBoard = true;
+
+            // not a match
+            setTimeout(() => {
+            firstCard.classList.remove('flip');
+            secondCard.classList.remove('flip');
+
+            resetBoard();
+            }, 1500);
 }
+
+function resetBoard() {
+            [hasFlippedCard, lockBoard] = [false, false];
+            [firstCard, secondCard] = [null, null];
+
+
+
+}
+
+(function shuffle() {
+            cards.forEach(card => {
+            let randomPos = Math.floor(Math.random() * 12);
+            card.style.order = randomPos;
+            });
+})();
+
+
+
+
+
 
 
 cards.forEach(card=>card.addEventListener('click', flipCard));
