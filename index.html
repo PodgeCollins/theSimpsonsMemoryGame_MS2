@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
 
     <title>Memory Game</title>
+    <!-----------------------CSS & BootStrap Link------------------------------>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
-    
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 
 <body>
+    <!-----------------------Page Heading/Score Panel/Reset Button----------------------->
     <div class="container">
         <header>
             <h1>The Simpsons Memory Game</h1>
@@ -26,17 +27,18 @@
             <div class="timer">
             </div>
 
-            <div class="restart">
+            <div class="restart" onclick="startGame()">
                 <i class="fa fa-repeat"></i>
             </div>
 
         </section>
+        <!-----------------------Memory Game Container----------------------->
         <section class="memory-game">
             <div class="memory-card" data-framework="Bart">
                 <img class="front" src="img/bart.jpg" alt="Bart" />
                 <img class="back" src="img/back2.jpg" alt="Back" />
             </div>
-          <div class="memory-card" data-framework="Bart">
+            <div class="memory-card" data-framework="Bart">
                 <img class="front" src="img/bart.jpg" alt="Bart" />
                 <img class="back" src="img/back2.jpg" alt="Back" />
             </div>
@@ -71,7 +73,7 @@
                 <img class="front" src="img/maggie.jpg" alt="Maggie" />
                 <img class="back" src="img/back2.jpg" alt="Back" />
             </div>
-           <div class="memory-card" data-framework="Maggie">
+            <div class="memory-card" data-framework="Maggie">
                 <img class="front" src="img/maggie.jpg" alt="Maggie" />
                 <img class="back" src="img/back2.jpg" alt="Back" />
             </div>
@@ -86,6 +88,25 @@
             </div>
         </section>
     </div>
+<!-----------------------JS Link & Font Awesome------------------------------>
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Congratulations 🎉</h2>
+                <a class="close" href="#">×</a>
+                <div class="content-1">
+                    Congratulations you're a winner 🎉🎉
+                </div>
+                <div class="content-2">
+                    <p>You made <span id="finalMove"> </span> moves </p>
+                    <p>in <span id="totalTime"> </span> </p>
+                    <p>Rating: <span id="starRating"></span></p>
+                </div>
+                <button id="play-again" onclick="playAgain()">
+                    <a>Play again 😄</a>
+                </button>
+            </div>
+        </div>
+    <!-----------------------JS Link & Font Awesome------------------------------>
     <script src="https://kit.fontawesome.com/f9d6df2339.js"></script>
     <script src="assets/scripts.js"></script>
 </body>
