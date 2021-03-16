@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -5,9 +7,9 @@
 }
 
 body {
-    height: 100vh;
+    height: 107vh;
   display: flex;
-  background: #060AB2;
+  background: rgb(71, 175, 235);
 }
 
 img{
@@ -15,12 +17,14 @@ img{
 }
 
 .container {
-    margin-left: 25%;
     display: flex;
     flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
+    flex-direction: column;
+    font-family: 'Indie Flower', cursive;
+    color: #FFD700;
+    text-shadow: 2px 2px #ff8800;	
 }
 /*--------------------------------Score Panel-------------------------------*/
 .score-panel {
@@ -42,7 +46,7 @@ img{
 
 .score-panel .restart {
 	float: right;
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .fa-star {
@@ -57,11 +61,10 @@ img{
 .memory-game{
     width: 640px;
     height: 640px;
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
-    border: 2px solid lime;
+   
 }
 /*-----------------------------------Cards-------------------------------*/
 .memory-card{
@@ -91,10 +94,8 @@ img{
 .back {
     width: 100%;
     height: 100%;
-    padding: 20px;
     position: absolute;
-    border-radius: 5px;
-    background: green;
+    border-radius: 5px;;
     backface-visibility: hidden;
     border: 2px solid black;
 }
@@ -102,3 +103,16 @@ img{
 .front {
   transform: rotateY(180deg);
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    
+}
+
+
+
