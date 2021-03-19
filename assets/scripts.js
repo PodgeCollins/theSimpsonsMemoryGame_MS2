@@ -12,9 +12,9 @@ const stars = document.querySelectorAll(".fa-star");
 let starsList = document.querySelectorAll(".stars li");
 
 
-document.body.onload = startGame();
+document.body.onload = resetGame();
 
-function startGame() {
+function resetGame() {
     //reset Cards
 
 
@@ -34,6 +34,8 @@ function startGame() {
     timer.innerHTML = "0 mins 0 secs";
     clearInterval(interval);
 }
+
+
 
 
 function flipCard() {
