@@ -1,10 +1,10 @@
 const cards = document.querySelectorAll('.memory-card');
 
 
-let hasFlippedCard = false;
-let lockBoard = false;
+let hasFlippedCard;
+let lockBoard; 
 let firstCard, secondCard;
-let moves = 0;
+let moves;
 let counter = document.querySelector(".moves");
 
 const stars = document.querySelectorAll(".fa-star");
@@ -13,27 +13,6 @@ let starsList = document.querySelectorAll(".stars li");
 
 
 document.body.onload = resetGame();
-
-function resetGame() {
-    //reset Cards
-
-
-    // reset moves
-    moves = 0;
-    counter.innerHTML = moves;
-    // reset rating
-    for (var i = 0; i < stars.length; i++) {
-        stars[i].style.color = "#FFD700";
-        stars[i].style.visibility = "visible";
-    }
-    //reset timer
-    second = 0;
-    minute = 0;
-    hour = 0;
-    var timer = document.querySelector(".timer");
-    timer.innerHTML = "0 mins 0 secs";
-    clearInterval(interval);
-}
 
 
 
@@ -141,22 +120,46 @@ function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 
-
-
-
 }
 
-(function shuffle() {
+function shuffle() {
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 12);
         card.style.order = randomPos;
     });
-})();
+}
+
+function resetGame() {
+    hasFlippedCard = false;
+    lockBoard = false;
+    firstCard = null;
+    secondCard = null;
+    //reset Cards
+    cards.forEach(card => {
+        card.classList.remove('flip');
+    })
+
+    //shuffle Cards
+
+    shuffle();
+
+    // reset moves
+    moves = 0;
+    counter.innerHTML = moves;
+    // reset rating
+    for (var i = 0; i < stars.length; i++) {
+        stars[i].style.color = "#FFD700";
+        stars[i].style.visibility = "visible";
+    }
+    //reset timer
+    second = 0;
+    minute = 0;
+    hour = 0;
+    var timer = document.querySelector(".timer");
+    timer.innerHTML = "0 mins 0 secs";
+    clearInterval(interval);
+    cards.forEach(card => card.addEventListener('click', flipCard));
+}
 
 
-
-
-
-
-
-cards.forEach(card => card.addEventListener('click', flipCard));
+//cards.forEach(card => card.addEventListener('click', flipCard));
