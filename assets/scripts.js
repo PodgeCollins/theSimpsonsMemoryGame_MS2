@@ -2,9 +2,10 @@ const cards = document.querySelectorAll('.memory-card');
 
 
 let hasFlippedCard;
-let lockBoard; 
+let lockBoard;
 let firstCard, secondCard;
 let moves;
+let remainingCards = 12;
 let counter = document.querySelector(".moves");
 
 const stars = document.querySelectorAll(".fa-star");
@@ -18,6 +19,8 @@ document.body.onload = resetGame();
 
 
 function flipCard() {
+
+
 
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -68,6 +71,9 @@ var timer = document.querySelector(".timer");
 var interval;
 function startTimer() {
     interval = setInterval(function () {
+        if (remainingCards == 0) {
+            return;
+        }
         timer.innerHTML = minute + "mins " + second + "secs";
         second++;
         if (second == 60) {
@@ -96,12 +102,17 @@ function checkForMatch() {
 
 
 function disableCards() {
+    remainingCards -= 2;
     // its a match
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     // cards cant be flipped back upon clicking
     resetBoard();
+    if (remainingCards == 0) {
+        congratulations();
+    }
 }
+
 
 function unFlipCards() {
 
@@ -129,11 +140,38 @@ function shuffle() {
     });
 }
 
+function congratulations() {
+    // show congratulations modal
+    document.getElementById("popup1").classList.add("show");
+
+    // declare star rating variable
+    var starRating = document.querySelector(".stars").innerHTML;
+
+    //showing move, rating, time on modal
+    document.getElementById("finalMove").innerHTML = moves;
+    document.getElementById("starRating").innerHTML = starRating;
+    document.getElementById("totalTime").innerHTML = minute + "m " + second + "s ";
+}
+
+// close icon on modal
+function closeModal() {
+    document.getElementById("popup1").classList.remove("show");
+}
+
+
+// for user to play Again 
+function playAgain() {
+    document.getElementById("popup1").classList.remove("show");
+    resetGame();
+}
+
+
 function resetGame() {
     hasFlippedCard = false;
     lockBoard = false;
     firstCard = null;
     secondCard = null;
+    remainingCards = 12;
     //reset Cards
     cards.forEach(card => {
         card.classList.remove('flip');
@@ -160,6 +198,3 @@ function resetGame() {
     clearInterval(interval);
     cards.forEach(card => card.addEventListener('click', flipCard));
 }
-
-
-//cards.forEach(card => card.addEventListener('click', flipCard));
