@@ -182,5 +182,40 @@ img{
 	border-radius: 5px;
 }
 
+/****** Media queries
 
 
+
+@media (max-width: 320px) {
+	.memory-game {
+		width: 85%;
+	}
+
+	.memory-game .memory-card {
+		height: 4.7rem;
+		width: 4.7rem;
+	}
+}
+*/
+
+/* For Tablets and larger screens
+
+
+@media (min-width: 768px) {
+	.container {
+		font-size: 22px;
+	}
+
+	.memory-game {
+		width: 660px;
+		height: 680px;
+	}
+
+	
+
+	.popup {
+		width: 60%;
+	}
+}
+
+*/
