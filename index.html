@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=F-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <meta name="HandheldFriendly" content="true">
 
     <title>The Simpsons Memory Game</title>
@@ -15,25 +15,25 @@
 <body>
     <!-----------------------Page Heading/Score Panel/Reset Button----------------------->
     <div class="container">
-        <header>
-            <h1>The Simpsons Memory Game</h1>
-        </header>
-        <section class="score-panel">
-            <ul class="stars">
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-            </ul>
-            <span class="moves">0</span> Move(s)
+            <header>
+                <h1>The Simpsons Memory Game</h1>
+            </header>
+            <section class="score-panel">
+                <ul class="stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
+                <span class="moves">0</span> Move(s)
 
-            <div class="timer">
-            </div>
+                <div class="timer">
+                </div>
 
-            <div class="restart" onclick="resetGame()">
-                <i class="fa fa-repeat"></i>
-            </div>
+                <div class="restart" onclick="resetGame()">
+                    <i class="fa fa-repeat"></i>
+                </div>
 
-        </section>
+            </section>
         <!-----------------------Memory Game Container----------------------->
         <section class="memory-game">
             <div class="memory-card" data-framework="Bart">
