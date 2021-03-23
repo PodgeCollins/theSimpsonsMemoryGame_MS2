@@ -88,7 +88,7 @@ Original Desktop Wireframe - [View](https://www.figma.com/file/BtBv8y0RpWvrDAnMw
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every 
 page of the project to ensure there were no syntax errors in the project.
 
-W3C Markup Validator - [Results](https://github.com/PodgeCollins/MileStoneProjectOne/tree/master/assets/Validation%20images)
+W3C Markup Validator - [Results](https://github.com/PodgeCollins/MilesStoneProjectTwo_MemoryGame/blob/master/validation%20images/W3C%20Markup%20Validator.png)
 
 W3C CSS Validator - [Results](http://jigsaw.w3.org/css-validator/validator$link)
 
@@ -139,8 +139,6 @@ W3C CSS Validator - [Results](http://jigsaw.w3.org/css-validator/validator$link)
     -When you click the restart button you can see at least one of the cards new location 
     after being flipped & shuffle.
    
-
-
 # Deployment:
 
 ## GitHub Pages:
