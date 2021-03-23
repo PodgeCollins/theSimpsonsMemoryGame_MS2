@@ -26,12 +26,6 @@ This web site is a simple single-player Simpsons themed card-matching memory gam
     -As a Returning Visitor, I want to find the Social Media links so that 
     I can follow and interact with the artists latest posts
 
-### Frequent User Goals:
-    -As a Frequent User, I want to check to see if there are any newly 
-    added merchandise to the website
-
-    -As a Frequent User, I want to check to see if the artist is playing 
-    new shows
 
 ## Design:
 
@@ -160,6 +154,8 @@ W3C CSS Validator - [Results](http://jigsaw.w3.org/css-validator/validator?uri=h
 
 ## Known Bugs
 
+    -When you click the restart button you can see at least one of the cards new location 
+    after being flipped & shuffle.
    
 
 
@@ -231,7 +227,7 @@ Click [Here](https://docs.github.com/en/free-pro-team@latest/github/creating-clo
 
 ## Code: 
 
-### [Bootstrap 4.2.1]
+### 
   
 
 ## Content:
