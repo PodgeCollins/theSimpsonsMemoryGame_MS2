@@ -7,35 +7,35 @@
     <meta name="HandheldFriendly" content="true">
 
     <title>The Simpsons Memory Game</title>
-    <!-----------------------CSS & BootStrap Link------------------------------>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 
 <body>
-    <!-----------------------Page Heading/Score Panel/Reset Button----------------------->
+
     <div class="container">
-            <header>
-                <h1>The Simpsons Memory Game</h1>
-            </header>
-            <section class="score-panel">
-                <ul class="stars">
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                </ul>
-                <span class="moves">0</span> Move(s)
+        <header>
+            <h1>The Simpsons Memory Game</h1>
+        </header>
+        <div class="score-panel">
+            <ul class="stars">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <span class="moves">0</span> Move(s)
 
-                <div class="timer">
-                </div>
+            <div class="timer">
+            </div>
 
-                <div class="restart" onclick="resetGame()">
-                    <i class="fa fa-repeat"></i>
-                </div>
+            <div class="restart" onclick="resetGame()">
+                <i class="fa fa-repeat"></i>
+            </div>
 
-            </section>
-        <!-----------------------Memory Game Container----------------------->
-        <section class="memory-game">
+        </div>
+
+        <div class="memory-game">
             <div class="memory-card" data-framework="Bart">
                 <img class="front" src="img/bart.jpg" alt="Bart" />
                 <img class="back" src="img/back2.jpg" alt="Back" />
@@ -88,9 +88,9 @@
                 <img class="front" src="img/simpsons.jpg" alt="Simpsons" />
                 <img class="back" src="img/back2.jpg" alt="Back" />
             </div>
-        </section>
+        </div>
 
-        <!---------------------------------Modal-------------------------------------->
+
         <div id="popup1" class="overlay" style="visibility: hidden;">
             <div class="popup">
                 <h2>Congratulations 🎉</h2>
@@ -109,7 +109,7 @@
             </div>
         </div>
     </div>
-    <!-----------------------JS Link & Font Awesome------------------------------>
+
     <script src="https://kit.fontawesome.com/f9d6df2339.js"></script>
     <script src="assets/scripts.js"></script>
 </body>

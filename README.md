@@ -6,10 +6,6 @@ This web site is a simple single-player Simpsons themed card-matching memory gam
 
 <h2 align="center"><img src="img/indexpage.png"></h2>
 
-
-
-
-
 # UX User Experience:
 
 ## User stories:
@@ -20,12 +16,8 @@ This web site is a simple single-player Simpsons themed card-matching memory gam
     -As a First Time Visitor, I want to clearly see my progress while playing.
 
 ### Returning Visitor Goals:
-    -As a Returning Visitor, I want to find the best way to get in contact 
-    with the organisation with any questions I may have
-
-    -As a Returning Visitor, I want to find the Social Media links so that 
-    I can follow and interact with the artists latest posts
-
+    -As a Returning Visitor, I want to be able to complete the game knowing I
+    got a better score than last time.
 
 ## Design:
 
@@ -49,17 +41,11 @@ This web site is a simple single-player Simpsons themed card-matching memory gam
 Original Desktop Wireframe - [View](https://www.figma.com/file/BtBv8y0RpWvrDAnMww7T1R/Mile-Stone-Two---Memory-Game?node-id=0%3A1)
 
 
-
-
 # Features:
 
     Responsive on all Devices 
 
     Interactives Elements
-
-
-
-
 
 # Technologies Used:
 
@@ -97,8 +83,6 @@ Original Desktop Wireframe - [View](https://www.figma.com/file/BtBv8y0RpWvrDAnMw
 
 
 
-
-
 # Testing 
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every 
@@ -106,9 +90,7 @@ page of the project to ensure there were no syntax errors in the project.
 
 W3C Markup Validator - [Results](https://github.com/PodgeCollins/MileStoneProjectOne/tree/master/assets/Validation%20images)
 
-W3C CSS Validator - [Results](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ff720af12-d07b-4ac6-8668-0870756cc90f.ws-eu03.gitpod.io%2F%23%2Fworkspace%2FMileStoneProjectOne&profile=css3svg&usermedium=all&warning=1&vextwarning=)
-
-
+W3C CSS Validator - [Results](http://jigsaw.w3.org/css-validator/validator$link)
 
 
 ## Testing User Stories from User Experience (UX) Section:
@@ -124,22 +106,22 @@ W3C CSS Validator - [Results](http://jigsaw.w3.org/css-validator/validator?uri=h
 
     - The user can restart the game at the click of a button. 
 
-#### As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content:
+#### As a First Time Visitor, I want to clearly see my progress while playing:
 
-    - The site has been designed to be fluid and never to entrap the user. At the top of 
-    each page there is a clean navigation bar, each link describes what the page they will 
-    end up at clearly.
-    
-    On the Contact Us Page, after a form response is submitted, the page refreshes and the 
-    user is brought to the top of the page where the navigation bar is.
+    - Above the cards the user can see a star rating, move counter and timer 
+    displaying the users progress as the game is played.
 
 ### Returning Visitor Goals:
 
-#### As a Returning Visitor:
+#### As a Returning Visitor, I want to be able to complete the game knowing I
+    got a better score than last time:
 
-#### As a Returning Visitor:
+    - Once the game is completed a modal will display showing the users time, move count
+    and star rating along with a play again button that restarts the game allowing the
+    user to try and beat their score. 
+    -There is also a reset button above the cards on the right letting the user start again
+    at any point in the game.
 
-### Frequent User Goals:
 
 ## Furthur Testing:
 
@@ -225,10 +207,10 @@ Click [Here](https://docs.github.com/en/free-pro-team@latest/github/creating-clo
 
 # Credits
 
-## Code: 
+## Code:
 
-### 
-  
+    To assist me with my coding of this website I followed Marina Ferreira (https://marina-ferreira.github.io/projects/js/memory-game/)
+    youtube tutorial.
 
 ## Content:
 
@@ -236,10 +218,10 @@ Click [Here](https://docs.github.com/en/free-pro-team@latest/github/creating-clo
 
 ## Media:
 
-All Simpsons content on index.html was taken from a free png site and 
-can be located [here](http://pngimg.com/images/heroes/simpsons)
+    All Simpsons content on index.html was taken from a free png site and 
+    can be located [here](http://pngimg.com/images/heroes/simpsons)
 
 ## Acknowledgements: 
 
-Thank you to my mentor was reviewing my work and assisting me with gaining
-a better understanding of Javascript.
+    Thank you to my mentor was reviewing my work and assisting me with gaining
+    a better understanding of Javascript.
