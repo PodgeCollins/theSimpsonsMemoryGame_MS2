@@ -7,9 +7,13 @@
 }
 
 body {
-    height: 107vh;
+  height: 100vh;
   display: flex;
   background: rgb(71, 175, 235);
+}
+
+h1{
+  font-size: xx-large;
 }
 
 img{
@@ -17,6 +21,7 @@ img{
 }
 /*--------------------------------Container With Heading-------------------------------*/
 .container {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 	justify-content: center;

@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=F-8">
+    <meta name="HandheldFriendly" content="true">
+
 
     <title>The Simpsons Memory Game</title>
     <!-----------------------CSS & BootStrap Link------------------------------>
@@ -87,9 +90,9 @@
                 <img class="back" src="img/back2.jpg" alt="Back" />
             </div>
         </section>
-    </div>
-    <!---------------------------------Modal-------------------------------------->
-    <div id="popup1" class="overlay">
+
+        <!---------------------------------Modal-------------------------------------->
+        <div id="popup1" class="overlay" style="visibility: hidden;">
             <div class="popup">
                 <h2>Congratulations 🎉</h2>
                 <a class="close" onclick="closeModal()">×</a>
@@ -106,6 +109,7 @@
                 </button>
             </div>
         </div>
+    </div>
     <!-----------------------JS Link & Font Awesome------------------------------>
     <script src="https://kit.fontawesome.com/f9d6df2339.js"></script>
     <script src="assets/scripts.js"></script>
