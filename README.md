@@ -138,8 +138,9 @@ W3C CSS Validator - [Results](http://jigsaw.w3.org/css-validator/validator$link)
 
     -When you click the restart button you can see at least one of the cards new location 
     after being flipped & shuffle.
+    
     -Javascript works in Chrome but not Safari.
-      
+
 # Deployment:
 
 ## GitHub Pages:
