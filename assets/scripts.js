@@ -25,31 +25,35 @@ function flipCard() {
     if (this === firstCard) return;
 
     this.classList.add('flip');
-        // first click
+    /** first click 
+    */
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = this;
         moveCounter();
     } else {
-        // second click
+        /** second click 
+        */
         secondCard = this;
         checkForMatch();
 
     }
 }
 /**  Represents Move Counter, Timer & Stars
- */  
+ */
 function moveCounter() {
     moves++;
     counter.innerHTML = moves;
-    //start timer on first click
+    /** start timer on first click
+    */
     if (moves == 1) {
         second = 0;
         minute = 0;
         hour = 0;
         startTimer();
     }
-    // setting rates based on moves
+    /** setting rates based on moves
+    */
     if (moves > 8 && moves < 12) {
         for (i = 0; i < 3; i++) {
             if (i > 1) {
@@ -66,11 +70,11 @@ function moveCounter() {
     }
 }
 
+/** Represents timer/clock 
+*/
 var second = 0, minute = 0; hour = 0;
 var timer = document.querySelector(".timer");
 var interval;
-/** Represents clock 
-*/
 function startTimer() {
     interval = setInterval(function () {
         if (remainingCards == 0) {
@@ -91,8 +95,8 @@ function startTimer() {
 
 /** Represents two cards flipped over
 Checks for matching pairs 
-if theres no match unflip is called
-*/ 
+if theres no match unflipCards is called
+*/
 
 function checkForMatch() {
     // do cards march?
@@ -112,22 +116,26 @@ function checkForMatch() {
 
 function disableCards() {
     remainingCards -= 2;
-    // its a match
+    /** its a match
+    */
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-    // cards cant be flipped back upon clicking
+    /** cards cant be flipped back upon clicking
+    */
     resetBoard();
     if (remainingCards == 0) {
         congratulations();
     }
 }
 
-/** Represents the cards that dont match */
+/** Represents the cards that dont match 
+*/
 function unFlipCards() {
 
     lockBoard = true;
 
-    // not a match
+    /** not a match
+    */
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
@@ -136,40 +144,49 @@ function unFlipCards() {
     }, 1500);
 }
 /** Allows the condition above to work by setting 
- firstCard and secondCard to nulls*/
+ firstCard and secondCard to nulls
+*/
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 
 }
-/** Represents the cards being shuffled into new postions */
+/** Represents the cards being shuffled into new postions
+ */
 function shuffle() {
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 12);
         card.style.order = randomPos;
     });
 }
-/** Represents Congratulations modal once all cards are matched */
+/** Represents Congratulations modal once all cards are matched 
+*/
 function congratulations() {
-    // show congratulations modal
+    /** show congratulations modal
+    */
     document.getElementById("popup1").classList.add("show");
 
-    // declare star rating variable
+    /** declare star rating variable
+    */
     var starRating = document.querySelector(".stars").innerHTML;
 
-    //showing move, rating, time on modal
+    /** showing move, rating, time on modal
+    */
     document.getElementById("finalMove").innerHTML = moves;
     document.getElementById("starRating").innerHTML = starRating;
     document.getElementById("totalTime").innerHTML = minute + "m " + second + "s ";
 }
 
-/** close icon on modal*/
+/** close icon on modal
+* marked by an 'x'
+*/
 function closeModal() {
     document.getElementById("popup1").classList.remove("show");
 }
 
 
-/**  for user to play Again */
+/**  for user to play Again 
+*/
 function playAgain() {
     document.getElementById("popup1").classList.remove("show");
     resetGame();
@@ -183,24 +200,29 @@ function resetGame() {
     firstCard = null;
     secondCard = null;
     remainingCards = 12;
-    //reset Cards
+    /** reset Cards
+    */
     cards.forEach(card => {
         card.classList.remove('flip');
     })
 
-    //shuffle Cards
+    /** shuffle Cards
+    */
 
     shuffle();
 
-    // reset moves
+    /** reset moves
+    */
     moves = 0;
     counter.innerHTML = moves;
-    // reset rating
+    /** reset rating
+    */
     for (var i = 0; i < stars.length; i++) {
         stars[i].style.color = "#FFD700";
         stars[i].style.visibility = "visible";
     }
-    //reset timer
+    /** reset timer
+    */
     second = 0;
     minute = 0;
     hour = 0;

@@ -125,9 +125,9 @@ W3C CSS Validator - [Results](http://jigsaw.w3.org/css-validator/validator$link)
 
 ## Furthur Testing:
 
-    -The Website was tested on Google Chrome & Safari 
+    -The Website was tested on Google Chrome, Safari & Internet Explorer 
 
-    -It was viewed on a variety of devices such a Laptop, Ipad and Oneplus5.
+    -It was viewed on a variety of devices such a Laptop, Tablet, iPhone and Oneplus5.
 
     -A large amount of testing was done to ensure the javascript worked on numerous devices.
 
@@ -138,8 +138,16 @@ W3C CSS Validator - [Results](http://jigsaw.w3.org/css-validator/validator$link)
 
     -When you click the restart button you can see at least one of the cards new location 
     after being flipped & shuffle.
+
+    -Website is limited to Google chrome.
+
+    -Website displays in Safari but the flipCard function isnt working as expected. 
+    When clicking a card the class of flip is added, however the card only displays the 
+    front facing image for a second before flipping back over.
+    The move counter, timer and star rating all work correctly. 
     
-    -Javascript works in Chrome but not Safari.
+    -Website displays in Internet Explorer but none of the elements on the page are responsive.
+    Cards dont flip upon click and timer doesnt start. 
 
 # Deployment:
 
