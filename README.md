@@ -90,7 +90,7 @@ page of the project to ensure there were no syntax errors in the project.
 
 W3C Markup Validator - [Results](https://github.com/PodgeCollins/MilesStoneProjectTwo_MemoryGame/blob/master/validation%20images/W3C%20Markup%20Validator.png)
 
-W3C CSS Validator - [Results](http://jigsaw.w3.org/css-validator/validator$link)
+W3C CSS Validator - [Results](https://github.com/PodgeCollins/MilesStoneProjectTwo_MemoryGame/blob/master/validation%20images/W3C%20CSS%20Validator.png)
 
 
 ## Testing User Stories from User Experience (UX) Section:
