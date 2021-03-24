@@ -12,21 +12,20 @@ const stars = document.querySelectorAll(".fa-star");
 
 let starsList = document.querySelectorAll(".stars li");
 
-
+/** Represents starting of a new game 
+ */
 document.body.onload = resetGame();
 
-
-
-
+/** Represents Card flipping over
+ flip class is added to memory-card class
+ */
 function flipCard() {
-
-
 
     if (lockBoard) return;
     if (this === firstCard) return;
 
     this.classList.add('flip');
-    // first click
+        // first click
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = this;
@@ -38,7 +37,8 @@ function flipCard() {
 
     }
 }
-
+/**  Represents Move Counter, Timer & Stars
+ */  
 function moveCounter() {
     moves++;
     counter.innerHTML = moves;
@@ -69,6 +69,8 @@ function moveCounter() {
 var second = 0, minute = 0; hour = 0;
 var timer = document.querySelector(".timer");
 var interval;
+/** Represents clock 
+*/
 function startTimer() {
     interval = setInterval(function () {
         if (remainingCards == 0) {
@@ -87,6 +89,10 @@ function startTimer() {
     }, 1000);
 }
 
+/** Represents two cards flipped over
+Checks for matching pairs 
+if theres no match unflip is called
+*/ 
 
 function checkForMatch() {
     // do cards march?
@@ -100,6 +106,9 @@ function checkForMatch() {
     }
 }
 
+/**  Represents the matched cards
+ makes them unclickable
+*/
 
 function disableCards() {
     remainingCards -= 2;
@@ -113,7 +122,7 @@ function disableCards() {
     }
 }
 
-
+/** Represents the cards that dont match */
 function unFlipCards() {
 
     lockBoard = true;
@@ -126,20 +135,21 @@ function unFlipCards() {
         resetBoard();
     }, 1500);
 }
-
+/** Allows the condition above to work by setting 
+ firstCard and secondCard to nulls*/
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 
 }
-
+/** Represents the cards being shuffled into new postions */
 function shuffle() {
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 12);
         card.style.order = randomPos;
     });
 }
-
+/** Represents Congratulations modal once all cards are matched */
 function congratulations() {
     // show congratulations modal
     document.getElementById("popup1").classList.add("show");
@@ -153,19 +163,20 @@ function congratulations() {
     document.getElementById("totalTime").innerHTML = minute + "m " + second + "s ";
 }
 
-// close icon on modal
+/** close icon on modal*/
 function closeModal() {
     document.getElementById("popup1").classList.remove("show");
 }
 
 
-// for user to play Again 
+/**  for user to play Again */
 function playAgain() {
     document.getElementById("popup1").classList.remove("show");
     resetGame();
 }
 
-
+/** Represents the game starting again and everything being reset
+ */
 function resetGame() {
     hasFlippedCard = false;
     lockBoard = false;
