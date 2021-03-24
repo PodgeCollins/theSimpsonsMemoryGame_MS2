@@ -207,8 +207,8 @@ Click [Here](https://docs.github.com/en/free-pro-team@latest/github/creating-clo
 
 ## Code:
 
-    To assist me with my coding of this website I followed Marina Ferreira (https://marina-ferreira.github.io/projects/js/memory-game/)
-    youtube tutorial.
+    I used Marina Ferreira (https://marina-ferreira.github.io/projects/js/memory-game/)
+    youtube tutorial and the Scotch (https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript) javascript tutorial.
 
 ## Content:
 
