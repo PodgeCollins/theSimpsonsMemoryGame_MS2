@@ -1,6 +1,6 @@
 <h1 align="center">Mile Stone Project Two</h1>
 
-[View full webpage here](https://podgecollins.github.io/MilesStoneProjectTwo_MemoryGame/) 
+[View full webpage here](https://podgecollins.github.io/theSimpsonsMemoryGame_MS2/) 
 
 This web site is a simple single-player Simpsons themed card-matching memory game.
 
